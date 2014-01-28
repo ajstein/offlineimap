@@ -9,5 +9,5 @@
 
 import subprocess
 
-def pass_get(secret_name):
+def get_secret_for(secret_name):
   return(subprocess.check_output(["pass", secret_name])).rstrip('\n')
