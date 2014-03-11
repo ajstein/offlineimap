@@ -10,4 +10,4 @@
 import subprocess
 
 def get_secret_for(secret_name):
-  return(subprocess.check_output(["pass", secret_name])).rstrip('\n')
+  return(subprocess.check_output(["pass " + secret_name], shell=True)).rstrip('\n')
